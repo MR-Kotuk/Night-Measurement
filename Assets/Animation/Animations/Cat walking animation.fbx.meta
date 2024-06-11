@@ -1,0 +1,304 @@
+fileFormatVersion: 2
+guid: 1552c351041277349b04a6b092a115fc
+ModelImporter:
+  serializedVersion: 22200
+  internalIDToNameTable: []
+  externalObjects: {}
+  materials:
+    materialImportMode: 2
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    removeConstantScaleCurves: 0
+    motionNodeName: 
+    rigImportErrors: "Invalid Avatar Rig Configuration. Missing or invalid transform:\n\tRequired
+      human bone 'LeftFoot' not found\n"
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Armature|ArmatureAction
+      takeName: Armature|ArmatureAction
+      internalID: 4781951162920444690
+      firstFrame: 0
+      lastFrame: 39
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 0
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importPhysicalCameras: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    nodeNameCollisionStrategy: 1
+    fileIdsGeneration: 2
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    keepQuads: 0
+    weldVertices: 1
+    bakeAxisConversion: 0
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    optimizeBones: 1
+    meshOptimizationFlags: -1
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVMarginMethod: 1
+    secondaryUVMinLightmapResolution: 40
+    secondaryUVMinObjectScale: 1
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    strictVertexDataChecks: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
+  importAnimation: 1
+  humanDescription:
+    serializedVersion: 3
+    human: []
+    skeleton:
+    - name: Cat walking animation(Clone)
+      parentName: 
+      position: {x: 0, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Light
+      parentName: Cat walking animation(Clone)
+      position: {x: 14.795903, y: 5.903862, z: 0.49155828}
+      rotation: {x: 0.52327543, y: -0.34203392, z: 0.72694236, w: 0.28416622}
+      scale: {x: 100.00001, y: 100, z: 100}
+    - name: Camera
+      parentName: Cat walking animation(Clone)
+      position: {x: -7.3588915, y: 4.958309, z: 6.925791}
+      rotation: {x: 0.09062847, y: 0.89379627, z: -0.20997298, w: 0.3857799}
+      scale: {x: 100, y: 100.00001, z: 99.99999}
+    - name: Head
+      parentName: Cat walking animation(Clone)
+      position: {x: -0.025216429, y: 2.7901573, z: 1.0752351}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
+      scale: {x: 47.795208, y: 47.795208, z: 47.795208}
+    - name: Cloak
+      parentName: Cat walking animation(Clone)
+      position: {x: -0.03281491, y: 1.7303398, z: 1.0763787}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
+      scale: {x: 63.874126, y: 63.874126, z: 63.874126}
+    - name: Torso
+      parentName: Cat walking animation(Clone)
+      position: {x: -0, y: 1.6279234, z: 1.0473647}
+      rotation: {x: -0.7071069, y: 0, z: 0, w: 0.7071067}
+      scale: {x: 33.999996, y: 34.000004, z: 74}
+    - name: Right eye
+      parentName: Cat walking animation(Clone)
+      position: {x: 0.41424465, y: 2.7728796, z: 0.9410198}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
+      scale: {x: 3.5782528, y: 5.790202, z: 11.748108}
+    - name: Left eye
+      parentName: Cat walking animation(Clone)
+      position: {x: 0.41325846, y: 2.7728796, z: 1.2034556}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
+      scale: {x: 3.6665282, y: 5.9330463, z: 12.037933}
+    - name: Armature
+      parentName: Cat walking animation(Clone)
+      position: {x: -0, y: 1.2701265, z: 1.085775}
+      rotation: {x: -0.50390446, y: -0.49742383, z: -0.47579098, w: 0.5217977}
+      scale: {x: 47.456505, y: 47.456505, z: 47.456505}
+    - name: Left pelvis
+      parentName: Armature
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0.0004114583, y: -0.00058558583, z: 0.99821067, w: 0.05979088}
+      scale: {x: 1.0000167, y: 1.0000002, z: 1.0000001}
+    - name: Left thigh
+      parentName: Left pelvis
+      position: {x: -6.9786663e-12, y: 0.004412743, z: -2.1827872e-13}
+      rotation: {x: -0.70601773, y: 0.03678521, z: -0.04369069, w: 0.7058874}
+      scale: {x: 0.999995, y: 1.0000051, z: 0.9999999}
+    - name: Left foot
+      parentName: Left thigh
+      position: {x: -0, y: 0.0060668713, z: -3.7252902e-11}
+      rotation: {x: 0.000085383654, y: -0.0000008624047, z: 0.0014376473, w: 0.99999905}
+      scale: {x: 1.0000019, y: 1.0000019, z: 1.0000005}
+    - name: Left foot_end
+      parentName: Left foot
+      position: {x: -0, y: 0.0059006843, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Right pelvis
+      parentName: Armature
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0.007482916, y: -0.000034211203, z: -0.0045797788, w: 0.99996156}
+      scale: {x: 1, y: 1.0000005, z: 1.0000004}
+    - name: Right thigh
+      parentName: Right pelvis
+      position: {x: -3.064564e-12, y: 0.0043788017, z: -2.4959945e-12}
+      rotation: {x: 0.7171107, y: 0.08411049, z: -0.08879474, w: -0.68614376}
+      scale: {x: 0.99999994, y: 1.0000013, z: 1.0000011}
+    - name: Right foot
+      parentName: Right thigh
+      position: {x: 7.4505804e-11, y: 0.006604317, z: -1.11758706e-10}
+      rotation: {x: -0, y: 0.0000000074505797, z: 0.000000052154057, w: 1}
+      scale: {x: 0.99999994, y: 1.0000018, z: 1.0000019}
+    - name: Right foot_end
+      parentName: Right foot
+      position: {x: -0, y: 0.0051586106, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Right pelvis.001
+      parentName: Armature
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0.602627, y: 0.33461738, z: 0.35169813, w: 0.63338804}
+      scale: {x: 0.9999998, y: 0.9999999, z: 0.99999994}
+    - name: Right pelvis.002
+      parentName: Right pelvis.001
+      position: {x: -2.1044059e-11, y: 0.010662169, z: -9.3132255e-12}
+      rotation: {x: 0.0031969845, y: -0.000000044703484, z: 0.006517589, w: 0.99997365}
+      scale: {x: 1.0000006, y: 1.0000004, z: 1.0000006}
+    - name: Right pelvis.003
+      parentName: Right pelvis.002
+      position: {x: 2.7939677e-11, y: 0.012623572, z: 1.0244548e-10}
+      rotation: {x: -0.30820534, y: -0.000000043314518, z: -0.75415987, w: 0.5798728}
+      scale: {x: 1.0000007, y: 1.000001, z: 1.0000004}
+    - name: Right pelvis.005
+      parentName: Right pelvis.003
+      position: {x: -2.7939677e-11, y: 0.004351322, z: 2.8871e-10}
+      rotation: {x: -0.000000119209275, y: -0.000000017551598, z: -0.00000038030635, w: 1}
+      scale: {x: 1.0000004, y: 1.0000001, z: 1.0000002}
+    - name: Right pelvis.006
+      parentName: Right pelvis.005
+      position: {x: 0.0000000012549571, y: 0.0018719743, z: -2.7008354e-10}
+      rotation: {x: -0.0017872313, y: 0.00061927654, z: -0.14428864, w: -0.98953384}
+      scale: {x: 1.0000002, y: 1.0000007, z: 0.99999994}
+    - name: Right pelvis.007
+      parentName: Right pelvis.006
+      position: {x: 4.656613e-10, y: 0.0059393933, z: -2.9802322e-10}
+      rotation: {x: -0.0022900498, y: 0.00007022118, z: -0.020570321, w: 0.9997858}
+      scale: {x: 1.0000004, y: 1.0000001, z: 1.0000004}
+    - name: Right pelvis.008
+      parentName: Right pelvis.007
+      position: {x: 4.377216e-10, y: 0.006652192, z: -1.6763806e-10}
+      rotation: {x: 0.0032487288, y: 0.00000006141187, z: 0.044296727, w: 0.9990131}
+      scale: {x: 1.0000004, y: 1.0000018, z: 1.0000005}
+    - name: Right pelvis.008_end
+      parentName: Right pelvis.008
+      position: {x: -0, y: 0.004400363, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Right pelvis.004
+      parentName: Right pelvis.002
+      position: {x: 2.7939677e-11, y: 0.012623572, z: 1.0244548e-10}
+      rotation: {x: 0.49362987, y: -0.003667007, z: 0.6209437, w: 0.6088883}
+      scale: {x: 0.99999964, y: 1.0000001, z: 1.0000001}
+    - name: Right pelvis.009
+      parentName: Right pelvis.004
+      position: {x: -4.0978193e-10, y: 0.005152837, z: 0.000000001322478}
+      rotation: {x: -0.13838783, y: -0.015920948, z: -0.0489887, w: 0.98903763}
+      scale: {x: 1, y: 1.0000011, z: 1.0000007}
+    - name: Right pelvis.010
+      parentName: Right pelvis.009
+      position: {x: -0.0000000011920929, y: 0.0038690125, z: 2.2351741e-10}
+      rotation: {x: 0.01577331, y: 0.00014183669, z: 0.006960961, w: 0.99985135}
+      scale: {x: 1.0000001, y: 1.0000008, z: 1.0000011}
+    - name: Right pelvis.011
+      parentName: Right pelvis.010
+      position: {x: 5.9604643e-10, y: 0.008065534, z: -4.4703483e-10}
+      rotation: {x: 0.012215493, y: 0.000000100399404, z: 0.006327657, w: 0.9999054}
+      scale: {x: 0.9999998, y: 1.0000017, z: 1.0000015}
+    - name: Right pelvis.011_end
+      parentName: Right pelvis.011
+      position: {x: -0, y: 0.007179405, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Legs
+      parentName: Cat walking animation(Clone)
+      position: {x: -0, y: 1.0083652, z: 0.89164776}
+      rotation: {x: -0.7071069, y: 0, z: 0, w: 0.7071067}
+      scale: {x: 11.724817, y: 11.7248125, z: 32.334457}
+    - name: Retopo_Left arm
+      parentName: Cat walking animation(Clone)
+      position: {x: -7.829354e-17, y: 2.093567, z: 1.56626}
+      rotation: {x: -0.00000004596021, y: 0.7933534, z: 0.60876137, w: 0.000000059896514}
+      scale: {x: 65.924385, y: 65.92438, z: 65.92438}
+    - name: Retopo_Right arm
+      parentName: Cat walking animation(Clone)
+      position: {x: -0, y: 2.0890408, z: 0.575705}
+      rotation: {x: -0.601815, y: 0, z: -0, w: 0.79863554}
+      scale: {x: 65.924385, y: 65.924385, z: 65.924385}
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    globalScale: 1
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
+  animationType: 2
+  humanoidOversampling: 1
+  avatarSetup: 0
+  addHumanoidExtraRootOnlyWhenUsingAvatar: 1
+  importBlendShapeDeformPercent: 1
+  remapMaterialsIfMaterialImportModeIsNone: 0
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

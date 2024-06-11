@@ -9,6 +9,8 @@ public class PlayerMovement : MonoBehaviour
 
     [SerializeField] private float _secondsToRun;
 
+    [SerializeField] private GameObject _pointObject;
+
     private NavMeshAgent _navAgent;
 
     private float _frames;
@@ -18,8 +20,11 @@ public class PlayerMovement : MonoBehaviour
     [Header("Layers")]
     [SerializeField] private LayerMask _canMove;
 
+    private PlayerAnimations _animator;
+
     private void Start()
     {
+        _animator = GetComponent<PlayerAnimations>();
         _navAgent = GetComponent<NavMeshAgent>();
         _navAgent.speed = _speed;
     }
@@ -40,6 +45,8 @@ public class PlayerMovement : MonoBehaviour
 
             if (Physics.Raycast(ray, out raycastHit) && raycastHit.collider.gameObject.layer == Mathf.Log(_canMove.value, 2) && IsPosInNavMesh(raycastHit.point))
             {
+                _pointObject.transform.position = raycastHit.point;
+
                 _navAgent.SetDestination(raycastHit.point);
 
                 if (isMove)
@@ -53,6 +60,9 @@ public class PlayerMovement : MonoBehaviour
                 isMove = true;
             }
         }
+
+
+        _animator.SwitchWalk(_navAgent.velocity.magnitude != 0);
     }
 
     private bool IsPosInNavMesh(Vector3 pos)
