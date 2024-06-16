@@ -26,57 +26,45 @@ public class PlayerMovement : MonoBehaviour
     {
         _animator = GetComponent<PlayerAnimations>();
         _navAgent = GetComponent<NavMeshAgent>();
+
         _navAgent.speed = _speed;
     }
 
     private void Update()
     {
-        Move();
-    }
-
-    private void Move()
-    {
         RatingFramesOfMoving();
-
-        if (Input.GetKeyDown(KeyCode.Mouse0))
-        {
-            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-            RaycastHit raycastHit;
-
-            if (Physics.Raycast(ray, out raycastHit) && raycastHit.collider.gameObject.layer == Mathf.Log(_canMove.value, 2) && IsPosInNavMesh(raycastHit.point))
-            {
-                _pointObject.transform.position = raycastHit.point;
-
-                _navAgent.SetDestination(raycastHit.point);
-
-                if (isMove)
-                {
-                    _navAgent.speed = _runSpeed;
-                    _frames = 0;
-                }
-                else
-                    _navAgent.speed = _speed;
-
-                isMove = true;
-            }
-        }
-
-
-        _animator.SwitchWalk(_navAgent.velocity.magnitude != 0);
+        _animator.SwitchMove(_navAgent.velocity.magnitude != 0, _navAgent.speed);
     }
 
-    private bool IsPosInNavMesh(Vector3 pos)
+    public void Move()
+    {
+        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+        RaycastHit raycastHit;
+
+        if (Physics.Raycast(ray, out raycastHit) && IsPosInNavMesh(raycastHit.collider.gameObject))
+        {
+            _pointObject.transform.position = raycastHit.point;
+
+            _navAgent.SetDestination(raycastHit.point);
+
+            if (isMove)
+            {
+                _navAgent.speed = _runSpeed;
+                _frames = 0;
+            }
+            else
+                _navAgent.speed = _speed;
+
+            isMove = true;
+        }
+    }
+
+    private bool IsPosInNavMesh(GameObject pos)
     {
         NavMeshHit hit;
 
-        if (NavMesh.SamplePosition(pos, out hit, 0.1f, NavMesh.AllAreas))
-        {
-            NavMeshPath path = new NavMeshPath();
-            NavMesh.CalculatePath(transform.position, pos, NavMesh.AllAreas, path);
-
-            if (path.status == NavMeshPathStatus.PathComplete)
-                return true;
-        }
+        if (NavMesh.SamplePosition(pos.transform.position, out hit, 10f, NavMesh.AllAreas))
+            return pos.layer == Mathf.Log(_canMove.value, 2);
 
         return false;
     }

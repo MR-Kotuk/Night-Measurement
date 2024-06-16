@@ -4,10 +4,12 @@ public class PlayerAnimations : MonoBehaviour
 {
     [SerializeField] private Animator _playerAnimator;
 
-    private const string _walk = "isWalk";
+    private const string _move = "isMove";
+    private const string _moveSpeed = "MoveSpeed";
 
-    public void SwitchWalk(bool isWalk)
+    public void SwitchMove(bool isMove, float speed)
     {
-        _playerAnimator.SetBool(_walk, isWalk);
+        _playerAnimator.SetBool(_move, isMove);
+        _playerAnimator.SetFloat(_moveSpeed, speed);
     }
 }
