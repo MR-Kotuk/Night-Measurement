@@ -31,11 +31,12 @@ Game Engine: Unity
 
 ### Assets:
 
-Unique assets: 
+Unique assets: [Triphold](https://t.me/dinamiteeeeee)
 
-UI/UX/design elements: 
+UI/UX/design elements: [Punyatmi](https://www.instagram.com/punyatmi_?igsh=MTg5NmRoZTl3OGI4Yg==)
 
 Assets Store: Unity Assets Store
+
 ## Authors
 
 Company: [MR_Kotuk Studio](https://mr-kotuk-studio.itch.io)
@@ -44,9 +45,9 @@ Company: [MR_Kotuk Studio](https://mr-kotuk-studio.itch.io)
 
 Programmer: [MR_Kotuk](https://github.com/MR-Kotuk)
 
-3D modelling artist: 
+3D modelling artist: [Triphold](https://t.me/dinamiteeeeee)
 
-UI/UX artist: 
+UI/UX artist: [Punyatmi](https://www.instagram.com/punyatmi_?igsh=MTg5NmRoZTl3OGI4Yg==)
 
 
 ## Support
