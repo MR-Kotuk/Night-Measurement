@@ -8,8 +8,11 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float _runSpeed;
 
     [SerializeField] private float _secondsToRun;
+    [Space]
 
+    [Header("Touch Point")]
     [SerializeField] private GameObject _pointObject;
+    [SerializeField] private float _distOff;
 
     private NavMeshAgent _navAgent;
 
@@ -27,6 +30,7 @@ public class PlayerMovement : MonoBehaviour
         _animator = GetComponent<PlayerAnimations>();
         _navAgent = GetComponent<NavMeshAgent>();
 
+        _pointObject.SetActive(false);
         _navAgent.speed = _speed;
     }
 
@@ -34,6 +38,9 @@ public class PlayerMovement : MonoBehaviour
     {
         RatingFramesOfMoving();
         _animator.SwitchMove(_navAgent.velocity.magnitude != 0, _navAgent.speed);
+
+        if (Vector3.Distance(transform.position, _pointObject.transform.position) <= _distOff)
+            _pointObject.SetActive(false);
     }
 
     public void Move()
@@ -43,7 +50,11 @@ public class PlayerMovement : MonoBehaviour
 
         if (Physics.Raycast(ray, out raycastHit) && IsPosInNavMesh(raycastHit.collider.gameObject))
         {
+            _pointObject.SetActive(false);
+            _pointObject.SetActive(true);
+
             _pointObject.transform.position = raycastHit.point;
+            _pointObject.transform.position = new Vector3(_pointObject.transform.position.x, _pointObject.transform.position.y + 0.1f, _pointObject.transform.position.z);
 
             _navAgent.SetDestination(raycastHit.point);
 
@@ -61,12 +72,7 @@ public class PlayerMovement : MonoBehaviour
 
     private bool IsPosInNavMesh(GameObject pos)
     {
-        NavMeshHit hit;
-
-        if (NavMesh.SamplePosition(pos.transform.position, out hit, 10f, NavMesh.AllAreas))
-            return pos.layer == Mathf.Log(_canMove.value, 2);
-
-        return false;
+        return pos.layer == Mathf.Log(_canMove.value, 2) && NavMesh.SamplePosition(pos.transform.position, out NavMeshHit hit, 1f, NavMesh.AllAreas);
     }
 
     private void RatingFramesOfMoving()
