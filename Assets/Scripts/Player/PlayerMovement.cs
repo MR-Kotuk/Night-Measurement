@@ -1,5 +1,5 @@
-using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -72,7 +72,7 @@ public class PlayerMovement : MonoBehaviour
 
     private bool IsPosInNavMesh(GameObject pos)
     {
-        return pos.layer == Mathf.Log(_canMove.value, 2) && NavMesh.SamplePosition(pos.transform.position, out NavMeshHit hit, 1f, NavMesh.AllAreas);
+        return pos.layer == Mathf.Log(_canMove.value, 2);
     }
 
     private void RatingFramesOfMoving()
