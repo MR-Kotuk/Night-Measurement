@@ -1,3 +1,4 @@
+using UnityEngine.SceneManagement;
 using UnityEngine.AI;
 using UnityEngine;
 
@@ -13,6 +14,10 @@ public class PlayerMovement : MonoBehaviour
     [Header("Touch Point")]
     [SerializeField] private GameObject _pointObject;
     [SerializeField] private float _distOff;
+    [Space]
+
+    [Header("Game")]
+    [SerializeField] private float _minPosY;
 
     private NavMeshAgent _navAgent;
 
@@ -41,6 +46,9 @@ public class PlayerMovement : MonoBehaviour
 
         if (Vector3.Distance(transform.position, _pointObject.transform.position) <= _distOff)
             _pointObject.SetActive(false);
+
+        if (transform.position.y <= _minPosY)
+            SceneManager.LoadScene("LevelOne");
     }
 
     public void Move()

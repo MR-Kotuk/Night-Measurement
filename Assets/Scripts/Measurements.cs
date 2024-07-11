@@ -25,14 +25,12 @@ public class Measurements : MonoBehaviour
     [SerializeField] private NavMeshSurface _surfcase;
 
     private bool isMeasurement = true;
+    private bool isCanSwitch;
 
-    private void Start()
+    public void MeasurementStartActive()
     {
-        MeasurementStartActive();
-    }
+        isCanSwitch = true;
 
-    private void MeasurementStartActive()
-    {
         _measurement.SetActive(true);
         _anotherMeasurement.SetActive(true);
 
@@ -41,11 +39,14 @@ public class Measurements : MonoBehaviour
 
     public void SwitchMeasurement()
     {
-        HapticFeedback.LightFeedback();
+        if (isCanSwitch)
+        {
+            HapticFeedback.LightFeedback();
 
-        isMeasurement = !isMeasurement;
+            isMeasurement = !isMeasurement;
 
-        MeasurementSwitchDissolve(isMeasurement);
+            MeasurementSwitchDissolve(isMeasurement);
+        }
     }
 
     private void MeasurementSwitchDissolve(bool isActive)
