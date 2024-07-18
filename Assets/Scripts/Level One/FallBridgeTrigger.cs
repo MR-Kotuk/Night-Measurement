@@ -37,8 +37,6 @@ public class FallBridgeTrigger : MonoBehaviour
                 fallObject.FallDelay = _fallDelay;
                 fallObject.isFall = true;
             }
-            else
-                fallPart.GetComponent<Rigidbody>().isKinematic = false;
 
             Destroy(fallPart, _destroyTime);
         }
@@ -49,5 +47,6 @@ public class FallBridgeTrigger : MonoBehaviour
     private void ActiveMeasurements()
     {
         _measurements.MeasurementStartActive();
+        Destroy(gameObject);
     }
 }
