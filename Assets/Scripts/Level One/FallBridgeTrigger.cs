@@ -18,7 +18,8 @@ public class FallBridgeTrigger : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.GetComponent<PlayerMovement>())
-            Fall(_fallingObjects);
+            Fall();
+
     }
 
     private void Update()
@@ -26,9 +27,9 @@ public class FallBridgeTrigger : MonoBehaviour
         _surfcase.BuildNavMesh();
     }
 
-    private void Fall(List<GameObject> objects)
+    private void Fall()
     {
-        foreach (GameObject fallPart in objects)
+        foreach (GameObject fallPart in _fallingObjects)
         {
             IFallObject fallObject = fallPart.GetComponent<IFallObject>();
 

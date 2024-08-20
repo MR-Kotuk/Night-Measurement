@@ -21,6 +21,10 @@ public class Measurements : MonoBehaviour
     [SerializeField] private float _minAmount;
     [Space]
 
+    [Header("SFX")]
+    [SerializeField] private AudioSource _switchMeasurementSFX;
+    [Space]
+
     [Header("Scripts")]
     [SerializeField] private NavMeshSurface _surfcase;
 
@@ -41,6 +45,8 @@ public class Measurements : MonoBehaviour
     {
         if (isCanSwitch)
         {
+            _switchMeasurementSFX.Play();
+
             HapticFeedback.LightFeedback();
 
             isMeasurement = !isMeasurement;

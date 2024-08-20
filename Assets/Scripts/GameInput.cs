@@ -12,6 +12,7 @@ public class GameInput : MonoBehaviour
 
     [Header("Scripts")]
     [SerializeField] private PlayerMovement _playerMove;
+    [SerializeField] private PlayerAudio _playerAudio;
     [SerializeField] private Measurements _measurements;
 
     private bool isHolding;
@@ -40,6 +41,7 @@ public class GameInput : MonoBehaviour
         {
             if (isHolding)
             {
+                //_playerAudio.Touch();
                 _playerMove.Move();
                 isHolding = false;
             }
